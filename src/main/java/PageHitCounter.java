@@ -15,7 +15,7 @@ public class PageHitCounter extends HttpServlet{
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException{
         String reset = request.getParameter("reset");
-        out.
+
         response.setContentType(("text/html"));
         hitCount++;
         PrintWriter out = response.getWriter();
