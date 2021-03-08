@@ -1,4 +1,3 @@
-
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -6,14 +5,14 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-@WebServlet(name = "CounterServlet", urlPatterns = "/counter")
+@WebServlet(name = "WhoAreYouServlet", urlPatterns = "/who-are-you")
 
-public class CounterServlet extends HttpServlet {
-    private int counter = 0;
 
+public class WhoAreYouServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        counter +=1;
-        resp.getWriter().println("<h1>The count is" + counter + ". </h1>");
+        String name = req.getParameter("name");
+        req.setAttribute("name", name);
+        req.getRequestDispatcher("who-are-you.jsp").forward(req, resp);
     }
 }
