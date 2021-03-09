@@ -85,9 +85,7 @@
 
 
 
-<%-- this is a JSP comment, you will *not* see this in the html --%>
 
-<!-- this is an HTML comment, you *will* see this in the html -->
 
 </body>
 </html>
