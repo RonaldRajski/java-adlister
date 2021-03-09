@@ -8,7 +8,7 @@
     <body>
         <h2>Pick your favorite color</h2>
 
-        <form action="/pickcolor" method="Post">
+        <form action="/pickColor.jsp" method="Post">
 
         <input name ="favorite_color" type="text" placeholder="Enter favorite color here.">
         <br>
